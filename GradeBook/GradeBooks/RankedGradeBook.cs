@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace GradeBook.GradeBooks
 {
     class RankedGradeBook
     {
-        public override char LetterGrade
+        public override char GetLetterGrade(double averageGrade)
         {
-            get
+             if (Student.Count < 5)
             {
-                if (averageGrade.Count < 5)
-                {
-                    InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
-                }
-                return 'F';
+                throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
             }
+            return 'F';
         }
     }
 }
- 

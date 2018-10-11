@@ -22,8 +22,8 @@ namespace GradeBook.GradeBooks
             }
             else
             {
-                int gradeCount = 0;
-                //for(int x = 0, x <= Students.Count, x++)
+                // My code using foreach but my calc for their ranking sucks balls and doesn't work..but it should
+                /*int gradeCount = 0;
                 foreach (var student in Students)
                 {
                     if (averageGrade >= student.AverageGrade)
@@ -52,10 +52,10 @@ namespace GradeBook.GradeBooks
                 else
                 {
                     return 'F';
-                }
+                }*/
 
                 //Below is answer from video -> above is my answer
-                /*var threshold = (int)Math.Ceiling(Students.Count * 0.2);
+                var threshold = (int)Math.Ceiling(Students.Count * 0.2);
                 var grades = Students.OrderByDescending(e => e.AverageGrade).Select(e => e.AverageGrade).ToList();
 
                 if(grades[threshold-1] <= averageGrade)
@@ -77,7 +77,7 @@ namespace GradeBook.GradeBooks
                 else
                 {
                     return 'F';
-                }*/
+                }
             }
         }
     }

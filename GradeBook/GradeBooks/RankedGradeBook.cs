@@ -32,19 +32,19 @@ namespace GradeBook.GradeBooks
                     }
                 }
 
-                if ((decimal)(gradeCount / Students.Count) >= (decimal)(0.2 * Students.Count))
+                if ((decimal)(gradeCount / Students.Count) >= (decimal)(0.2 ))
                 {
                     return 'A';
                 }
-                else if ((decimal)(gradeCount / Students.Count) >=  (decimal)(0.4 * Students.Count))
+                else if ((decimal)(gradeCount / Students.Count) >  (decimal)(0.4))
                 {
                     return 'B';
                 }
-                else if ((decimal)(gradeCount / Students.Count) >=(decimal)( 0.6 * Students.Count))
+                else if ((decimal)(gradeCount / Students.Count) > (decimal)( 0.6))
                 {
                     return 'D';
                 }
-                else if ((decimal)(gradeCount / Students.Count) >= (decimal)(0.8 * Students.Count))
+                else if ((decimal)(gradeCount / Students.Count) > (decimal)(0.8))
                 {
                     return 'E';
                 }

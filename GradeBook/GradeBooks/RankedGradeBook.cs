@@ -26,9 +26,9 @@ namespace GradeBook.GradeBooks
                 //for(int x = 0, x <= Students.Count, x++)
                 foreach (var student in Students)
                 {
-                    if (averageGrade >= student.AverageGrade)
+                    if (averageGrade > student.AverageGrade)
                     {
-                        gradeCount ++;
+                        gradeCount += gradeCount;
                     }
                 }
 
@@ -36,15 +36,15 @@ namespace GradeBook.GradeBooks
                 {
                     return 'A';
                 }
-                else if ((decimal)(gradeCount / Students.Count) >  (decimal)(0.6))
+                else if ((decimal)(gradeCount / Students.Count) >=  (decimal)(0.6))
                 {
                     return 'B';
                 }
-                else if ((decimal)(gradeCount / Students.Count) > (decimal)( 0.4))
+                else if ((decimal)(gradeCount / Students.Count) >= (decimal)( 0.4))
                 {
                     return 'D';
                 }
-                else if ((decimal)(gradeCount / Students.Count) > (decimal)(0.2))
+                else if ((decimal)(gradeCount / Students.Count) >= (decimal)(0.2))
                 {
                     return 'E';
                 }

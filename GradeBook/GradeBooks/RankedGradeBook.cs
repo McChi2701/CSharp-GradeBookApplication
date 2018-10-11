@@ -28,7 +28,7 @@ namespace GradeBook.GradeBooks
                 {
                     if (averageGrade > student.AverageGrade)
                     {
-                        gradeCount += gradeCount;
+                        gradeCount ++;
                     }
                 }
 

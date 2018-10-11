@@ -41,11 +41,11 @@ namespace GradeBook.GradeBooks
                 {
                     return 'B';
                 }
-                else if ((int)(gradeCount) >= (int)((0.4 * Students.Count) - 1))
+                else if (gradeCount >= (int)((0.4 * Students.Count)))
                 {
                     return 'D';
                 }
-                else if ((int)(gradeCount) >= (int)((0.2 * Students.Count) - 1))
+                else if (gradeCount >= (int)((0.2 * Students.Count)))
                 {
                     return 'E';
                 }

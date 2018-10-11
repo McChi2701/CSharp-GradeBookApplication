@@ -20,7 +20,6 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
             }
-            return 'F';
             else
             {
                 int gradeCount = 0;
@@ -33,20 +32,20 @@ namespace GradeBook.GradeBooks
                     }
                 }
 
-                if ((decimal)(gradeCount) >= (decimal)(0.8 * (Students.Count - 1)))
+                if ((decimal)(gradeCount) >= (decimal)((0.8 * Students.Count) - 1))
                 {
                     return 'A';
                 }
-                else if ( (decimal)(gradeCount) >= (decimal)(0.6 * (Students.Count - 1)))
+                else if ( (decimal)(gradeCount) >= (decimal)((0.6 * Students.Count) - 1))
                 //else if ((decimal)(gradeCount / Students.Count) >=  (decimal)(0.6))
                 {
                     return 'B';
                 }
-                else if ((decimal)(gradeCount) >= (decimal)(0.4 * (Students.Count - 1)))
+                else if ((decimal)(gradeCount) >= (decimal)((0.4 * Students.Count) - 1))
                 {
                     return 'D';
                 }
-                else if ((decimal)(gradeCount) >= (decimal)(0.2 * (Students.Count - 1)))
+                else if ((decimal)(gradeCount) >= (decimal)((0.2 * Students.Count) - 1))
                 {
                     return 'E';
                 }

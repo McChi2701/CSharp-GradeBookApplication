@@ -32,7 +32,7 @@ namespace GradeBook.GradeBooks
                     }
                 }
 
-                if ((decimal)((gradeCount+1) / Students.Count) >= (decimal)(0.8))
+                if ((decimal)(gradeCount / (Students.Count-1)) >= (decimal)(0.8))
                 {
                     return 'A';
                 }

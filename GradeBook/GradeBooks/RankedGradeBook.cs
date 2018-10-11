@@ -19,7 +19,39 @@ namespace GradeBook.GradeBooks
             if (Students.Count < 5)
             {
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
-                var threshold = (int)Math.Ceiling(Students.Count * 0.2);
+                int gradeCount = 0;
+                //for(int x = 0, x <= Students.Count, x++)
+                foreach (var student in Students)
+                {
+                    if (averageGrade >= student.AverageGrade)
+                    {
+                        gradeCount += 1;
+                    }
+                }
+
+                if (gradeCount >= Math.Round(Students.Count * 0.2))
+                {
+                    return 'A';
+                }
+                else if (gradeCount >= Math.Round(Students.Count * 0.4))
+                {
+                    return 'B';
+                }
+                else if (gradeCount >= Math.Round(Students.Count * 0.6))
+                {
+                    return 'D';
+                }
+                else if (gradeCount >= Math.Round(Students.Count * 0.8))
+                {
+                    return 'E';
+                }
+                else
+                {
+                    return 'F';
+                }
+
+                //Below is answer from video -> above is my answer
+                /*var threshold = (int)Math.Ceiling(Students.Count * 0.2);
                 var grades = Students.OrderByDescending(e => e.AverageGrade).Select(e => e.AverageGrade).ToList();
 
                 if(grades[threshold-1] <= averageGrade)
@@ -41,7 +73,7 @@ namespace GradeBook.GradeBooks
                 else
                 {
                     return 'F';
-                }
+                }*/
             }
         }
     }

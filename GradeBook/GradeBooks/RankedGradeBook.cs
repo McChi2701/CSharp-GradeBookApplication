@@ -19,29 +19,32 @@ namespace GradeBook.GradeBooks
             if (Students.Count < 5)
             {
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
+            }
+            else
+            {
                 int gradeCount = 0;
                 //for(int x = 0, x <= Students.Count, x++)
                 foreach (var student in Students)
                 {
                     if (averageGrade >= student.AverageGrade)
                     {
-                        gradeCount += 1;
+                        gradeCount += gradeCount;
                     }
                 }
 
-                if (gradeCount >= Math.Round(Students.Count * 0.2))
+                if (gradeCount >= (int)Math.Round(Students.Count * 0.2))
                 {
                     return 'A';
                 }
-                else if (gradeCount >= Math.Round(Students.Count * 0.4))
+                else if (gradeCount >= (int)Math.Round(Students.Count * 0.4))
                 {
                     return 'B';
                 }
-                else if (gradeCount >= Math.Round(Students.Count * 0.6))
+                else if (gradeCount >= (int)Math.Round(Students.Count * 0.6))
                 {
                     return 'D';
                 }
-                else if (gradeCount >= Math.Round(Students.Count * 0.8))
+                else if (gradeCount >= (int)Math.Round(Students.Count * 0.8))
                 {
                     return 'E';
                 }

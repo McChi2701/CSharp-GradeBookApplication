@@ -36,15 +36,15 @@ namespace GradeBook.GradeBooks
                 {
                     return 'A';
                 }
-                else if ((decimal)(gradeCount / Students.Count) >=  (decimal)(0.6))
+                else if ((decimal)(gradeCount / Students.Count) >  (decimal)(0.59))
                 {
                     return 'B';
                 }
-                else if ((decimal)(gradeCount / Students.Count) >= (decimal)( 0.4))
+                else if ((decimal)(gradeCount / Students.Count) > (decimal)( 0.39))
                 {
                     return 'D';
                 }
-                else if ((decimal)(gradeCount / Students.Count) >= (decimal)(0.2))
+                else if ((decimal)(gradeCount / Students.Count) > (decimal)(0.19))
                 {
                     return 'E';
                 }

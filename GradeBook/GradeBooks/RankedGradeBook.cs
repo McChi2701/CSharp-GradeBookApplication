@@ -31,11 +31,18 @@ namespace GradeBook.GradeBooks
                         gradeCount ++;
                     }
                 }
-
-                if ((int)(gradeCount) >= (int)((0.8 * Students.Count) - 1))
+                gradeCount++;
+                if (gradeCount >= (int)((0.8 * Students.Count))
                 {
                     return 'A';
                 }
+
+
+
+                //if ((int)(gradeCount) >= (int)((0.8 * Students.Count) - 1))
+                //{
+                //    return 'A';
+                //}
                 else if ( (int)(gradeCount) >= (int)((0.6 * Students.Count) - 1))
                 //else if ((decimal)(gradeCount / Students.Count) >=  (decimal)(0.6))
                 {

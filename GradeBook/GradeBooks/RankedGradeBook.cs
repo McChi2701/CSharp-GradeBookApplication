@@ -26,7 +26,7 @@ namespace GradeBook.GradeBooks
                 //for(int x = 0, x <= Students.Count, x++)
                 foreach (var student in Students)
                 {
-                    if (averageGrade > student.AverageGrade)
+                    if (averageGrade >= student.AverageGrade)
                     {
                         gradeCount ++;
                     }

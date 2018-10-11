@@ -20,6 +20,7 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
             }
+            return 'F';
             else
             {
                 int gradeCount = 0;
